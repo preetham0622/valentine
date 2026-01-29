@@ -17,7 +17,6 @@ body {
   background: linear-gradient(135deg, #ff9a9e, #fad0c4);
   background-size: 400% 400%;
   animation: gradientBG 20s ease infinite;
-  transition: background 1s;
 }
 
 @keyframes gradientBG {
@@ -173,7 +172,7 @@ function yes() {
   const card = document.getElementById("card");
   card.innerHTML = `
     <div class="fade-in-bounce">
-      <h1>LOVE YOU BABY 💘</h1>
+      <h1>Yayyy! 💘</h1>
       <p class="lyrics" id="lyric"></p>
       <p style="margin-bottom:8px;">Play this 🎧</p>
       <iframe style="border-radius:12px"
@@ -181,7 +180,7 @@ function yes() {
         width="100%" height="80" frameborder="0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
       </iframe>
-      <p style="margin-top:12px;"> </p>
+      <p style="margin-top:12px;">I knew it ❤️🥰</p>
     </div>
   `;
 
@@ -201,9 +200,9 @@ function yes() {
   }
 }
 
-// Suspense question
+// Start suspense with first question
 const questionEl = document.getElementById("question");
-typeWriter("Hmm... I have something to ask you...", questionEl, 80, () => {
+typeWriter("Can I ask you a question...", questionEl, 80, () => {
   setTimeout(() => {
     typeWriter("Will you be my Valentine? 💕", questionEl, 120, () => {
       const card = document.getElementById("card");
@@ -212,7 +211,7 @@ typeWriter("Hmm... I have something to ask you...", questionEl, 80, () => {
         <button id="noBtn" onmouseover="runAway()">No 🙈</button>
       `;
     });
-  }, 800);
+  }, 1200); // pause between first question and actual Valentine question
 });
 </script>
 
